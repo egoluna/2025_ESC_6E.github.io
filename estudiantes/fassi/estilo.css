@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Irish+Grover&family=Luckiest+Guy&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: "Delius", system-ui;
+    background: url(https://i.pinimg.com/1200x/20/d5/4c/20d54caa2b23731fafa08d55eab9c506.jpg);
+    color: #333;
+  }
+  
+  .contenedor {
+    min-width: 500px;
+    width: 80%;
+    margin: 60px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    animation: fadeUpZoom 1s ease;
+  }
+  
+  /* --- PERFIL --- */
+ header {
+  font-family: "Irish Grover", cursive;
+  position: relative;
+  height: 350px;
+  background-image: url('recursos/fotos/banner2.jpeg');
+  border-radius:10px 10px 0 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+  .perfil {
+    text-align: center;
+    margin-bottom: 30px;
+      
+  }
+  .perfil h1{
+    font-size:3em;
+    text-shadow:2px 1px white;
+  }
+  
+  .foto-perfil {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    content: '';
+  }
+
+
+  /* --- HISTORIA --- */
+  .historia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .texto {
+    flex: 1;
+    text-align: justify;    
+  }
+  
+  .imagen-lateral {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+
+  .intereses {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  h2 {
+    color: #1976d2;
+  }
+  
+  .intereses ul {
+    list-style: "★ ";
+    padding-left: 20px;
+  }
+
+  .podcast {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .podcast audio {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+
+  .volver {
+    display: inline-block;
+    background-color:  #1976d2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .volver:hover {
+    background: teal;
+  }
+  
+
+  @keyframes fadeUpZoom {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .historia {
+      flex-direction: column;
+    }
+    .imagen-lateral {
+      width: 100%;
+    }
+  }
+  
+
+
+
+
+
+.preguntas {
+    margin-top: 40px;
+  }
+  
+  .preguntas h2 {
+    color: #1976d2;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .acordeon {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .acordeon-btn {
+    width: 100%;
+    background: #1976d2;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border: none;
+    outline: none;
+    text-align: left;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .acordeon-btn:hover {
+    background: teal;
+  }
+  
+  .acordeon-contenido {
+    background: #f1f1f1;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  
+  .acordeon-contenido p {
+    margin: 15px 0;
+  }
+  
+  /* Cuando se abre */
+  .acordeon-contenido.activo {
+    padding: 15px;
+    max-height: 200px;
+  }
+
+  /*ESTRELLAS*/
+  .star {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  image-rendering: pixelated;
+  z-index: 9999;
+  filter: hue-rotate(160deg);
+  content: url("https://enchantments.carrd.co/assets/images/gallery17/1dee4d0c.gif?v=7116bf41");
+
+  top: -80px;
+  animation: fallingstars 6s linear infinite;
+  }
+
+  @keyframes fallingstars {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(120vh);
+      opacity: 0;
+    }
+  }
+
+  .star.yellow { left: 10%; }
+  .star.yellow.one { left: 90%; animation-delay: 1s; }
+  .star.blue.six { left: 0%; animation-delay: 2s; }
+  .star.yellow.two { left: 10%; animation-delay: 1.5s; }
+  .star.blue.seven { left: 20%; animation-delay: 3s; }
+  .star.yellow.three { left: 30%; animation-delay: 0.5s; }
+  .star.blue.eight { left: 40%; animation-delay: 2.8s; }
+  .star.yellow.four { left: 50%; animation-delay: 4s; }
+  .star.blue.nine { left: 60%; animation-delay: 3.5s; }
+  .star.yellow.five { left: 70%; animation-delay: 5s; }
+  .star.blue.ten { left: 80%; animation-delay: 4.3s; }
+  /*FIN ESTRELLAS*/
+
+ .slider {
+  position: relative;
+  width: 350px;     /* el tamaño que ya usabas */
+  height: 200px;    /* cambialo si querés */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+.slider img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fade 36s infinite;
+}
+
+
+.slider img:nth-child(1) { animation-delay: 0s; }
+.slider img:nth-child(2) { animation-delay: 3s; }
+.slider img:nth-child(3) { animation-delay: 6s; }
+.slider img:nth-child(4) { animation-delay: 9s; }
+.slider img:nth-child(5) { animation-delay: 12s; }
+.slider img:nth-child(6) { animation-delay: 15s; }
+.slider img:nth-child(7) { animation-delay: 18s; }
+.slider img:nth-child(8) { animation-delay: 21s; }
+.slider img:nth-child(9) { animation-delay: 24s; }
+.slider img:nth-child(10) { animation-delay: 27s; }
+.slider img:nth-child(11) { animation-delay: 30s; }
+.slider img:nth-child(12) { animation-delay: 33s; }
+
+@keyframes fade {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+/*CANCIONES*/
+.songs_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 2px;
+  width: 110%;   /* podés subir o bajar esto */
+  transform: translateX(-20px);  /* lo empuja a la izquierda */
+}
+
+.songs_container iframe{
+  margin-left: -6px;
+}
+
+/*Si querés que sólo queden los iframe (me di cuenta que por ahí es al pedo poner la lista con artistas
+borrá el <ul></ul>, dejá sólo la caja de los iframe y sacale la clase "intereses". Para centrar los
+iframe tendrías que hacer algo como .song_container{margin: 0 auto;} y si no mandale al chat.
+Si querés poner track en vez de álbum decime y te lo cambio, también podés poner una playlist tuya. Te puse dos tamaños para que veas cuál 
+te gusta:D si querés modificarlo cambiale el height*/
+
+/*CANCIÓN DE FONDO*/
+#music {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 80px;
+  transition: 0.5s width;
+}
+
+#music:hover {
+  width: 360px;
+}
+
+/*VINILO*/
+@keyframes spin {
+    100% {
+      transform:rotate(360deg);
+    }
+  }
+  
+  .recordPlayer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  .vinyl {
+    height: 150px;
+    margin-left: 55px;
+    padding: 10px;
+    animation: spin 1.88s linear infinite;
+    position: absolute;
+  }
+  .vinylCover {
+    height: 150px;
+    position: relative;
+    z-index: 1;
+    margin-right: 55px;
+  }
+
+  /*GALERÍA PELIS*/
+  .galeria-pelis {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+.galeria-pelis .peli {
+  text-align: center;
+  background: rgba(255,255,255,0.05);
+  padding: 8px;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.galeria-pelis .peli:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.galeria-pelis img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.galeria-pelis h3 {
+  margin-top: 7px;
+  font-size: 14px;
+}
